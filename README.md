@@ -7,4 +7,6 @@ Com o objetivo de colocar em prática e treinar a atual linguagem de programaç�
  - Ter uma planilha do Excel como banco de dados, que pode ser consultado para inventários;
  - Excluir produtos da lista;
  - Atualizar a entrada e saída de peças;
- - Permitir que outros usuários façam requisiç
+ - Permitir que outros usuários façam requisições de separação de peças.
+
+O programa será feito totalmente em Python. Será meu primeiro projeto para começar a colocar em prática o que aprendo.
