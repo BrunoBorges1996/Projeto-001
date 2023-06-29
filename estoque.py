@@ -1,20 +1,23 @@
-estoque = {}
+temporario = []
+estoque = []
 
 while True:
-    codigo = input('Digite o código do produto: ')
-    nome = input('Digite o nome do produto: ')
-    quantidade = int(input('Digite a quantidade do produto: '))
+    print('[1] - Consultar um item\n'
+          '[2] - Adicionar um item\n'
+          '[3] - Remover um item')
+    opcao = input('Selecione a opção desejada: ')
 
-    item = {'codigo': codigo, 'nome': nome, 'quantidade': quantidade}
-    estoque[codigo] = item
+    if opcao == '1':
+        for item in estoque:
+            print(f'{item[0]} | {item[1]} | {item[2]}')
 
-    print(f'Código: {codigo}\n'
-          f'Nome: {nome}\n'
-          f'Quantidade: {quantidade}\n'
-          'Item adicionado com sucesso!')
-    continuar = input('Deseja adicionar outro produto? [S/N]: ').strip().upper()
-    if continuar == 'N':
-        break
-
-for codigo, nome, quantidade in estoque:
-    print(f'{codigo} | {nome} | {quantidade}')
+    elif opcao == '2':
+        while True:
+            temporario.append(input('Digite o código do produto: '))
+            temporario.append(input('Digite o nome do produto: '))
+            temporario.append(int(input('Digite a quantidade que deseja adicionar: ')))
+            estoque.append(temporario[:])
+            temporario.clear()
+            continuar = input('Deseja adicionar outro produto?[S/N]: ').strip().upper()[0]
+            if continuar in 'N':
+                break
